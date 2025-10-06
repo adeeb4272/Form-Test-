@@ -4,189 +4,143 @@
     <meta charset="UTF-8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,500;1,600&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
 
-<style>
-
-    .form{
-
-        width: 100%;
-        background: gray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-    .main-box{
-
-        width: 80%;
-        padding: 50px;
-    }
-
-    .image{
-        width: 50%;
-        margin-Right: 20px;
-    }
-
-    .main-box{
-
-    float: left;
-    display: flex;
-    background-color: white;
-    }
-
-    .image img{
-        width: 100%;
-
-    }
-
-    .form-box{
+    <style>
+        .form{
+            width: 100%;
+            background: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-box{
+            width: 80%;
+            padding: 50px;
+            float: left;
+            display: flex;
+            background-color: white;
+        }
+        .image{
+            width: 50%;
+            margin-right: 20px;
+        }
+        .image img{
+            width: 100%;
+        }
+        .form-box{
             margin-left: 20px;
             width: 50%;
-    }
-
-.form-box h1 {
-    font-size: 50px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-    .form{
-
-             }
-    .name{
-
-            }
-    .username{
-
-                }
-    .email1{
-
-             }
-    .gender{
-        
-            }
-
-    .password{
-
-            }
-    
-    
-    .button{
-        background :#333333;
-        padding: 12px 3Spx;
-        font-size: ISpx;
-        color: #fff;
-            }
-    
-    .btn{
+        }
+        .form-box h1 {
+            font-size: 50px;
+            text-transform: uppercase;
             text-align: center;
         }
-
-
-
-
-    
-
-button {
-    font-size: 20px;
-    border: none;
-    padding: 14px 43px;
-    background-color: #000;
-    color: #fff;
-}
-.name input{border: none;
-    border-bottom: 1px solid black;
-    width: 46%;
-
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid black;
-    width: 93%;
-    margin-bottom: 45px;
-    padding-bottom: 10px;
-}
-
-input:focus{
-    border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-}
-
-select{
-        border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 45px;
-    width: 93%;
-}
-</style>
-
+        button {
+            font-size: 20px;
+            border: none;
+            padding: 14px 43px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        input, select {
+            border: none;
+            border-bottom: 1px solid black;
+            width: 93%;
+            margin-bottom: 45px;
+            padding-bottom: 10px;
+        }
+        input:focus, select:focus{
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        .name input{
+            width: 46%;
+        }
+        .btn{
+            text-align: center;
+        }
+    </style>
+</head>
 
 <body>
-    
 <section class="form">
-
 <div class="main-box">
 
-<div class="image">
-<img src="image/form.png" alt="">
+    <div class="image">
+        <img src="image/form.png" alt="">
+    </div>
+
+    <div class="form-box">
+        <h1>This is form</h1>
+
+        <form action="https://formspree.io/f/xqaylvbw" method="POST">
+            <div class="name">
+                <input type="text" name="first_name" placeholder="First name" required>
+                <input type="text" name="last_name" placeholder="Last name" required>
+            </div>
+
+            <div class="username">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="email1">
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="gender">
+                <select name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="password">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="confirm-password">
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+            </div>
+
+            <div class="btn">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+    </div>
 </div>
-
-<div class="form-box">
-    <h1>This is form</h1>
-<form  action="https://formspree.io/f/xqaylvbw" method="POST">
-        <div class="name">
-            <input type="text" placeholder="First name" s>
-           <input type="text" placeholder="last name">
-        </div>
-
-
-        <div class="username">
-            <input type="text" placeholder="Usrname">
-        </div>
-
-        <div class="email1">
-            <input type="email" placeholder="Enter your email">
-        </div>
-
-        <div class="gender">
-
-            <select name="gender" id="">gender
-                <option value="male">gender</option>
-                <option value="male">male</option>
-                <option value="female">female</option>
-            </select>
-        </div>
-
-        <div class="password">
-            <input type="password" placeholder="password">
-        </div>
-        <div class="confirm-password">
-            <input type="password" placeholder="confirm-password">
-        </div>
-
-        <div class="btn">
-            <a href="#"><button> Register </button></a>
-        </div>
-
-</form>
-</div>
-
-
-</div>
-
 </section>
 
+<script>
+const form = document.querySelector("form");
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const data = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (res.ok) {
+    alert("✅ Thank you! Your form has been submitted successfully.");
+    form.reset();
+  } else {
+    alert("❌ Something went wrong. Please try again.");
+  }
+});
+</script>
 
 </body>
-
 </html>
